@@ -1,0 +1,37 @@
+LAST FUNCTIONS - 
+
+
+FIND-LAsT(TM, Ts, r, 0 0
+	Input: Minimum spanning tree Tu, shortest-path tree Ts, vertex r, ~ > 1.
+	Output: an (~, 1 + 2/(~ -- 1))-LAST rooted at r.
+	1 INITIALIZE( )
+	2 DFS(r)
+	3 return tree T = {(v, p[v])lv~ V -- {r}}
+	
+DFS(u)
+	Traverse the subtree of T M rooted at u, relaxing edges as they are traversed,
+	and adding paths from Ts as needed.
+	1 if d[u] > ~Drs(r, u)
+		2 then ADD-PATH(U)
+	3 for each child v of u in T M
+		4 do RELAX(U, V)
+			5 DFS(v)
+			6 RELAX(V, U)
+
+ADD-PATH(V)
+	relax edges along path from r to v in T s.
+	1 if d[v] > DTff, v)
+	2 then Aoo-PgTH(parentTs(V))
+	RELAX(parentTs(V), V)
+
+
+INITIALIZE( )
+	Initialize distance estimates, parent pointers.
+	1 for each nonroot vertex v do p[v] *-- nil; d[v] *-- oo
+	2 d[r] +-- 0
+
+RELAX(U, V)
+	Check for shorter path to v through (u, v).
+	1 if d[v] > d[u] + w(u, v)
+		2 then d[v] *- d[u] + w(u, v)
+			3 p[v] *-- u

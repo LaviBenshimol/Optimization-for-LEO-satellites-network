@@ -1,0 +1,1 @@
+-g -Wall -MMD -MP -MF .d  -fPIC  -fno-stack-protector -DHAVE_SWAPCONTEXT -DWITH_MPI -DXMLPARSER=libxml -DPREFER_QTENV -DWITH_QTENV -DWITH_PARSIM -DWITH_NETBUILDER -DWITH_OSG  -DINET_IMPORT  -I/home/glab/Downloads/omnetpp-5.4.1/include
